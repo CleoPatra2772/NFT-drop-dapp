@@ -1,8 +1,15 @@
 import Image from "next/image";
 import qwerty from "../../asset/qwerty.jpeg";
 import qwertycollection from "../../asset/qwerty-collection.jpeg";
+import { useAddress, useDisconnect, useMetamask } from "@thirdweb-dev/react";
 
  const NFTDropPage = () => {
+    // Auth
+
+    const connectWithMetaMask = useMetamask();
+    const address = useAddress();
+    const disconnect = useDisconnect();
+
     return(
     <div className="flex h-screen flex-col lg:grid lg:grid-cols-10 ">
         {/* Left */}
@@ -29,7 +36,8 @@ import qwertycollection from "../../asset/qwerty-collection.jpeg";
                     NFT Market Place
                     </h1>
 
-                <button className="rounded-full bg-rose-400 text-white px-4 py-2 text-xs font-bold lg:px-5 lg:py-3 lg:text-base ">Sign In</button>
+                <button onClick={() => connectWithMetaMask()}
+                className="rounded-full bg-rose-400 text-white px-4 py-2 text-xs font-bold lg:px-5 lg:py-3 lg:text-base ">Sign In</button>
             </header>
             <hr className="my-2 border" />
             {/* Content */}
