@@ -3,9 +3,9 @@ import qwerty from "../../asset/qwerty.jpeg"
 
  const NFTDropPage = () => {
     return(
-    <div className="flex h-screen flex-col">
+    <div className="flex h-screen flex-col lg:grid lg:grid-cols-10 ">
         {/* Left */}
-        <div className="bg-gradient-to-br from-cyan-800 to-rose-500">
+        <div className="bg-gradient-to-br from-cyan-800 to-rose-500 lg:col-span-4">
             <div className="flex flex-col items-center justify-center py-2 lg:min-h-screen">
                 <div className="bg-gradient-to-br from-yellow-400 to-purple-600 p-2 rounded-xl">
                 <Image src={qwerty} alt=""
@@ -20,10 +20,20 @@ import qwerty from "../../asset/qwerty.jpeg"
         </div>
 
         {/* Right */}
-        <div>
-            <div>
+        <div className="flex flex-1 flex-col p-12 lg:col-span-6">
+            {/* Header */}
+            <header className="flex items-center justify-between">
+                <h1 className="w-52 cursor-pointer text-xl font-extralight sm:w-80">
+                    <span className="font-extrabold "> QWERTY </span> {" "}
+                    NFT Market Place
+                    </h1>
 
-            </div>
+                <button className="rounded-full bg-rose-400 text-white px-4 py-2 text-xs font-bold lg:px-5 lg:py-3 lg:text-base ">Sign In</button>
+            </header>
+            <hr className="my-2 border" />
+            {/* Content */}
+
+            {/* Mint Button */}
         </div>
 
     </div>
