@@ -1,5 +1,6 @@
 import Image from "next/image";
-import qwerty from "../../asset/qwerty.jpeg"
+import qwerty from "../../asset/qwerty.jpeg";
+import qwertycollection from "../../asset/qwerty-collection.jpeg";
 
  const NFTDropPage = () => {
     return(
@@ -32,8 +33,18 @@ import qwerty from "../../asset/qwerty.jpeg"
             </header>
             <hr className="my-2 border" />
             {/* Content */}
+            <div className="mt-10 flex flex-1 flex-col items-center space-y-6 text-center lg:space-y-0 lg:justify-center
+            
+            ">
+                <Image
+                className="object-contain w-80 pb-10 lg:h-60" src={qwertycollection} alt="" />
+                <h1 className="text-3xl font-bold lg:text-5xl lg:font-extrabold">Young Qwerty | NFT Drop</h1>
 
+                <p className="pt-2 text-xl text-green-500"> 3 / 12 NFT's Claimed</p>
+
+            </div>
             {/* Mint Button */}
+            <button className="h-16 bg-red-600 text-white rounded-full font-bold">Mint NFT (0.01 ETH)</button>
         </div>
 
     </div>
